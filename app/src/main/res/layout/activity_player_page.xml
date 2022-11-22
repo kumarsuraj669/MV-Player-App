@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".playerPage">
+
+    <SeekBar
+        android:id="@+id/seekBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/playerIcon" />
+
+    <LinearLayout
+        android:id="@+id/navBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/seekBar">
+
+        <Button
+            android:id="@+id/rewind"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/rewind_button1" />
+
+        <Button
+            android:id="@+id/prev"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/back_button1" />
+
+        <Button
+            android:id="@+id/play"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_margin="15dp"
+            android:layout_weight="1"
+            android:background="@drawable/play_button1"
+            app:iconTint="#A0B3B3"
+            app:rippleColor="#B82424" />
+
+        <Button
+            android:id="@+id/next"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/back_button1"
+            android:rotation="180" />
+
+        <Button
+            android:id="@+id/forward"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/rewind_button1"
+            android:rotation="180" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/playerIcon"
+        android:layout_width="249dp"
+        android:layout_height="243dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title"
+        app:srcCompat="@drawable/player_icon" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="TextView"
+        android:textColor="#CDE46A28"
+        android:fontFamily="@font/sanssemibold"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
